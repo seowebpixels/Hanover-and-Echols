@@ -1,0 +1,60 @@
+---
+// Import the base asset variables
+// NOTE: Make sure these paths match your actual structure in src/assets/images/
+const criminalIcon = "/assets/images/criminal-defense.png";
+const familyIcon = "/assets/images/family-law.png";
+const injuryIcon = "/assets/images/personal-injury.png";
+---
+
+<!-- THREE-COLUMN SERVICE CARDS MATRIX: Native CSS Grid Bypass -->
+<div 
+  style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; margin-bottom: 8rem; align-items: stretch;"
+>
+  
+  <!-- CARD 1: CRIMINAL DEFENSE -->
+  <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+    <h3 class="text-2xl font-serif text-white mb-8">Criminal Defense</h3>
+    <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+      <img src={criminalIcon} alt="Criminal Defense Scale" style="transform: scale(2.7);" class="w-full h-full object-contain" />
+    </div>
+    <p class="text-sm text-slate-300 font-light leading-relaxed my-8 max-w-[260px]">
+      Aggressive defense for those facing criminal charges. We protect your rights and your future.
+    </p>
+    <a href="/criminal-defense" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+      Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+    </a>
+  </div>
+
+  <!-- CARD 2: FAMILY LAW -->
+  <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+    <h3 class="text-2xl font-serif text-white mb-8">Family Law</h3>
+    <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+      <img src={familyIcon} alt="Family Law Silhouette" style="transform: scale(2.5);" class="w-full h-full object-contain" />
+    </div>
+    <ul class="text-sm text-slate-300 font-light leading-loose text-left inline-block my-8 list-disc list-inside max-w-[260px]">
+      <li>Divorce Representation</li>
+      <li>Prenuptial Agreement</li>
+      <li>Child Custody</li>
+      <li>Spousal Support</li>
+      <li>Divorce Mediation</li>
+    </ul>
+    <a href="/family-law" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+      Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+    </a>
+  </div>
+
+  <!-- CARD 3: PERSONAL INJURY -->
+  <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+    <h3 class="text-2xl font-serif text-white mb-8">Personal Injury</h3>
+    <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+      <img src={injuryIcon} alt="Personal Injury Cast" style="transform: scale(2.6);" class="w-full h-full object-contain" />
+    </div>
+    <p class="text-sm text-slate-300 font-light leading-relaxed my-8 max-w-[260px]">
+      Fighting for the compensation you deserve after an injury caused by someone else's negligence.
+    </p>
+    <a href="/personal-injury" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+      Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+    </a>
+  </div>
+
+</div>

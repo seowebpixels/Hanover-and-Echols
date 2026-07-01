@@ -1,0 +1,35 @@
+<section class="bg-[#02084b] py-16 px-6 text-white">
+  <div class="max-w-4xl mx-auto" id="contact-form-container">
+    <h2 class="text-4xl font-serif mb-8 text-center">Schedule Your Free Consultation</h2>
+    
+    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Full Name</label>
+        <input type="text" placeholder="John Doe" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Email Address</label>
+        <input type="email" placeholder="john@example.com" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Phone Number</label>
+        <input type="tel" placeholder="+1 469 902 4621" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Legal Service Needed</label>
+        <select class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none text-white">
+          <option>Criminal Defense</option>
+          <option>Family Law</option>
+          <option>Personal Injury</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-2 md:col-span-2">
+        <label class="text-sm font-semibold">Briefly describe your case</label>
+        <textarea placeholder="Tell us how we can help..." class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg h-32 focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300"></textarea>
+      </div>
+      <button type="submit" class="md:col-span-2 w-full bg-[#64B5F6] text-[#02084b] py-4 rounded-lg font-bold hover:bg-white transition-all">
+        Send Request
+      </button>
+    </form>
+  </div>
+</section>

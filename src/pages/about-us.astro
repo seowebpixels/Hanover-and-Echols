@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Import images (Ensure these match your renamed files)
+import logo from '../assets/images/hanover-and-echols-square-logo.png';
+import allan from '../assets/images/allan-henderson-esq.png';
+import elizabeth from '../assets/images/elizabeth-crowley.png';
+import jillian from '../assets/images/jillian-aderson-esq.png';
+import john from '../assets/images/john-williams-esq.png';
+import judith from '../assets/images/judith-peters.png';
+import mary from '../assets/images/mary-fitzpatrick-esq.png';
+---
+
+<BaseLayout title="About Us | Hanover and Echols">
+  <Header />
+
+  <main class="bg-[#02084b] text-white py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <!-- HERO -->
+      <div class="text-center mb-16">
+        <img src={logo.src} alt="Hanover & Echols Logo" class="w-64 h-64 mx-auto mb-6 rounded-lg" />
+        <h1 class="text-5xl font-serif text-[#00E5FF] mb-6">About Our Firm</h1>
+        
+        <div class="text-lg text-slate-300 max-w-3xl mx-auto space-y-6">
+          <p>
+            At Hanover and Echols, we combine decades of rigorous legal training with a deeply personal commitment to our clients' success. Our practice is built on a foundation of intellectual precision and unwavering advocacy, ensuring that every case—regardless of complexity—is handled with the meticulous attention to detail that our clients expect and deserve.
+          </p>
+          <p>
+            Our firm is defined by a culture of excellence, where seasoned litigation experts collaborate to navigate the intricacies of the law. By leveraging a multidisciplinary approach, we provide comprehensive legal strategies that protect your interests, uphold your rights, and achieve favorable outcomes in even the most challenging legal landscapes.
+          </p>
+        </div>
+      </div>
+
+      <!-- ATTORNEY GRID -->
+      <div class="grid md:grid-cols-2 gap-12">
+        
+        <!-- Allan Henderson -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={allan.src} alt="Allan Henderson" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">Allan Henderson, Esq.</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Senior Partner & Litigation Specialist</p>
+            <p class="text-sm">J.D. from Harvard Law; 25+ years experience in high-stakes litigation. Recognized as a Super Lawyer for consecutive years.</p>
+          </div>
+        </div>
+
+        <!-- Elizabeth Crowley -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={elizabeth.src} alt="Elizabeth Crowley" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">Elizabeth Crowley</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Director of Family Law</p>
+            <p class="text-sm">Board-certified Family Law expert; former appellate court clerk with a specialization in complex asset division.</p>
+          </div>
+        </div>
+
+        <!-- Jillian Aderson -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={jillian.src} alt="Jillian Aderson" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">Jillian Aderson, Esq.</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Senior Associate, Personal Injury</p>
+            <p class="text-sm">Top-ranked graduate of Yale Law; specialized in tort law and catastrophic injury claims with a record of multi-million dollar settlements.</p>
+          </div>
+        </div>
+
+        <!-- John Williams -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={john.src} alt="John Williams" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">John Williams, Esq.</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Managing Partner</p>
+            <p class="text-sm">Juris Doctor, Oxford University; international legal scholar and former legislative advisor with expertise in constitutional law.</p>
+          </div>
+        </div>
+
+        <!-- Judith Peters -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={judith.src} alt="Judith Peters" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">Judith Peters</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Senior Legal Consultant</p>
+            <p class="text-sm">Expertise in complex mediation and conflict resolution; formerly served as a senior judge for 15 years.</p>
+          </div>
+        </div>
+
+        <!-- Mary Fitzpatrick -->
+        <div class="flex gap-6 items-start bg-[#1a237e] p-6 rounded-xl">
+          <img src={mary.src} alt="Mary Fitzpatrick" class="w-32 h-32 object-cover rounded-lg" />
+          <div>
+            <h3 class="text-xl font-bold text-[#00E5FF]">Mary Fitzpatrick, Esq.</h3>
+            <p class="text-sm text-slate-300 mb-2 font-semibold">Specialist, Employment Law</p>
+            <p class="text-sm">Master of Laws (LL.M) from Cambridge; recognized for pioneering work in employee rights and corporate litigation strategy.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+// Adjust these paths based on where your assets folder is located
+import logo from '../assets/images/hanover-and-echols-square-logo.png';
+import socialIcons from '../assets/images/social-media-icons.png';
+---
+<footer class="bg-[#02084b] text-white pt-16 pb-8 border-t border-slate-700">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+    
+    <div class="col-span-1">
+      <img src={logo.src} alt="Hanover & Echols" class="w-70 h-auto mb-6" />
+      <p class="text-sm text-slate-300 leading-relaxed">
+        Based in Dallas, Hanover & Echols provides premium, results-driven legal representation across the DFW metroplex. Specializing in aggressive criminal defense, compassionate family law, and relentless personal injury advocacy, our firm is committed to protecting your rights, your family, and your future in Texas courts.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-8">Quick Links</h4>
+      <ul class="space-y-2 text-slate-500">
+        <li><a href="/">Home</a></li>
+        <li><a href="/criminal-defense">Criminal Defense</a></li>
+        <li><a href="/family-law">Family Law</a></li>
+        <li><a href="/personal-injury">Personal Injury</a></li>
+        <li><a href="/team">Meet The Team</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-8">Areas Served</h4>
+      <ul class="space-y-2 text-slate-300">
+        <li>Dallas</li>
+        <li>Plano</li>
+        <li>Frisco</li>
+        <li>McKinney</li>
+        <li>Irving</li>
+        <li>Garland</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-8">Contact Information</h4>
+      <p class="text-slate-300 mb-6">+1 469 902 4621<br/>legal@hande.com</p>
+      
+      <h4 class="font-bold mb-8">Follow Us On Social</h4>
+      <div class="flex justify-start">
+        <a href="#" class="inline-block">
+          <img 
+            src={socialIcons.src} 
+            alt="Follow us on social media" 
+            class="h-40 w-auto object-contain hover:opacity-80 transition-opacity -mt-1 -ml-2" 
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between text-sm text-slate-400 gap-4">
+    <p>&copy; 2026 Hanover and Echols. All Rights Reserved. Engineered via Astro Framework.</p>
+    <div class="flex gap-6">
+      <a href="/privacy" class="hover:text-white">Privacy Policy</a>
+      <a href="/terms" class="hover:text-white">Terms of Service</a>
+    </div>
+  </div>
+</footer>

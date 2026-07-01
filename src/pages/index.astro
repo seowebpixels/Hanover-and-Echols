@@ -1,0 +1,588 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicesMatrix from '../components/ServicesMatrix.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// STAGE 1 LOGO & HERO IMPORTS
+import logoImage from '../assets/images/hanover-and-echols-square-logo.png';
+import skylineImage from '../assets/images/dallas-skyline-hero-image.png';
+
+// STAGE 2 DIVIDER & COLUMN CARD IMPORTS
+import heroShield from '../assets/images/hero-shield.png';
+import criminalIcon from '../assets/images/criminal-defense.png';
+import familyIcon from '../assets/images/family-law.png';
+import injuryIcon from '../assets/images/personal-injury.png';
+
+// STAGE 2 YELLOW TRUST SIGNAL IMPORTS
+import clientIcon from '../assets/images/client-focused.png';
+import experienceIcon from '../assets/images/experienced.png';
+import discreetIcon from '../assets/images/discreet.png';
+import resultsIcon from '../assets/images/results-driven.png';
+
+// STAGE 3 FEATURE VALUE ROW IMPORTS
+import yearsIcon from '../assets/images/thirty-plus-years-of-experience.png';
+import casesIcon from '../assets/images/hundres-of-successful-cases.png';
+import ratingIcon from '../assets/images/five-star-client-satisfaction.png';
+import representationIcon from '../assets/images/personalized-representation.png';
+
+// STAGE 4 TEAM PHOTO AND LAW BADGES
+import teamPhoto from '../assets/images/team-of-attorneys.jpg';
+import superLawyers from '../assets/images/super-lawyers-logo.png';
+import nbtaLogo from '../assets/images/national-board-of-trial-advocacy-logo.png';
+import abaLogo from '../assets/images/american-bar-association-logo.png';
+import top100Logo from '../assets/images/top-one-hundred-trial-lawyers-logo.webp';
+import stateBarLogo from '../assets/images/state-bar-of-texas-logo.png';
+
+// TESTIMONIAL UPDATE 
+import stars from '../assets/images/five-stars.png';
+import googleLogo from '../assets/images/google-logo.png';
+
+// FOOTER UPDATE 
+import logo from '../assets/images/hanover-and-echols-square-logo.png';
+import socialIcons from '../assets/images/social-media-icons.png';
+---
+
+<!-- Embed Cormorant Garamond for premium editorial typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+<BaseLayout title="Hanover & Echols, LLC | Premium DFW Legal Counsel">
+  <div class="w-full bg-[#02084b] min-h-screen flex flex-col text-white">
+    
+  <Header/>
+  
+    <!-- HERO BANNER IMAGE FRAME -->
+    <section class="w-full relative overflow-hidden z-10">
+      <div class="w-full aspect-[16/9] md:aspect-[21/9] lg:h-[500px]">
+        <img 
+          src={skylineImage.src} 
+          alt="Dallas Skyline at Night" 
+          class="w-full h-full object-cover object-center block"
+        />
+      </div>
+    </section>
+
+    <!-- STAGE 2 CONTAINER -->
+    <section class="w-full bg-[#02084b] text-white px-6 py-20 flex flex-col items-center">
+      
+      <!-- Typography Styling (Ensured Tighter Letter Spacing) -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+      <p 
+        style="font-family: 'Cormorant Garamond', serif !important;" 
+        class="text-2xl md:text-3xl lg:text-4xl font-medium tracking-wider text-slate-200 mb-6 text-center"
+      >
+        Dedicated. Strategic. Results Driven.
+      </p>
+
+      <!-- SHIELD DIVIDER -->
+      <div class="w-full max-w-2xl flex items-center justify-center gap-6 mb-12">
+        <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/40 to-white/70"></div>
+        <div class="w-50 h-50 flex-shrink-0">
+          <img src={heroShield.src} alt="Shield Icon" class="w-full h-full object-contain filter drop-shadow-lg" />
+        </div>
+        <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-white/40 to-white/70"></div>
+      </div>
+
+      <!-- MAIN CORE COMMITMENT HEADLINE -->
+      <h2 class="text-3xl md:text-4xl font-normal tracking-wider text-center mb-8 uppercase max-w-4xl leading-snug">
+        Your Case. Your Future. Our Commitment.
+      </h2>
+
+      <!-- INTRODUCTION SUBTEXT DESCRIPTION -->
+      <p class="text-base md:text-lg font-light text-slate-300 text-center max-w-3xl leading-relaxed mb-20">
+        At Hanover and Echols, we provide personalized legal representation with the attention, experience, and results that you deserve.
+      </p>
+
+      <!-- THREE-COLUMN SERVICE CARDS MATRIX: Native CSS Grid Bypass -->
+      <div 
+        style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; margin-bottom: 8rem; align-items: stretch;"
+      >
+        
+        <!-- CARD 1: CRIMINAL DEFENSE -->
+        <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+          <h3 class="text-2xl font-serif text-white mb-8">Criminal Defense</h3>
+          <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={criminalIcon.src} alt="Criminal Defense Scale" style="transform: scale(2.7);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm text-slate-300 font-light leading-relaxed my-8 max-w-[260px]">
+            Aggressive defense for those facing criminal charges. We protect your rights and your future.
+          </p>
+          <a href="/criminal-defense" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+            Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- CARD 2: FAMILY LAW -->
+        <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+          <h3 class="text-2xl font-serif text-white mb-8">Family Law</h3>
+          <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={familyIcon.src} alt="Family Law Silhouette" style="transform: scale(2.5);" class="w-full h-full object-contain" />
+          </div>
+          <ul class="text-sm text-slate-300 font-light leading-loose text-left inline-block my-8 list-disc list-inside max-w-[260px]">
+            <li>Divorce Representation</li>
+            <li>Prenuptial Agreement</li>
+            <li>Child Custody</li>
+            <li>Spousal Support</li>
+            <li>Divorce Mediation</li>
+          </ul>
+          <a href="/family-law" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+            Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- CARD 3: PERSONAL INJURY -->
+        <div class="border border-cyan-400/20 rounded-[2.5rem] bg-[#02084b]/60 backdrop-blur-sm p-8 md:p-10 flex flex-col items-center text-center shadow-xl hover:border-[#00E5FF] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] transition-all duration-300 group">
+          <h3 class="text-2xl font-serif text-white mb-8">Personal Injury</h3>
+          <div style="width: 150px; height: 150px;" class="rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={injuryIcon.src} alt="Personal Injury Cast" style="transform: scale(2.6);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm text-slate-300 font-light leading-relaxed my-8 max-w-[260px]">
+            Fighting for the compensation you deserve after an injury caused by someone else's negligence.
+          </p>
+          <a href="/personal-injury" class="mt-auto flex items-center gap-2 text-xs font-semibold tracking-widest text-white uppercase hover:text-[#00E5FF] transition-colors">
+            Learn More <span class="text-lg tracking-normal group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- TRUST & BRAND FEATURES: Forced 4-Column Horizontal Row Bypass -->
+      <div 
+        style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; pt: 4rem; border-top: 1px solid rgba(255,255,255,0.1);"
+        class="pt-16"
+      >
+        
+        <!-- Feature 1: Client Focused -->
+        <div class="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 group">
+          <!-- Maximum Enlarged Icon Container -->
+          <div class="w-32 h-32 flex-shrink-0 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-5 shadow-xl overflow-hidden">
+            <img src={clientIcon.src} alt="Shield Check Icon" style="transform: scale(2.2);" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col items-center">
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Client Focused</h4>
+            <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">
+              Personalized attention for every case.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Experienced -->
+        <div class="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 group">
+          <!-- Maximum Enlarged Icon Container -->
+          <div class="w-32 h-32 flex-shrink-0 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-5 shadow-xl overflow-hidden">
+            <img src={experienceIcon.src} alt="Courthouse Pillars Icon" style="transform: scale(2.2);" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col items-center">
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Experienced</h4>
+            <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">
+              Decades of combined legal experience.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Discreet -->
+        <div class="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 group">
+          <!-- Maximum Enlarged Icon Container -->
+          <div class="w-32 h-32 flex-shrink-0 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-5 shadow-xl overflow-hidden">
+            <img src={discreetIcon.src} alt="Handshake Icon" style="transform: scale(2.2);" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col items-center">
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Discreet</h4>
+            <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">
+              Your case is completely confidential.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Results Driven -->
+        <div class="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 group">
+          <!-- Maximum Enlarged Icon Container -->
+          <div class="w-32 h-32 flex-shrink-0 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-5 shadow-xl overflow-hidden">
+            <img src={resultsIcon.src} alt="Trophy Icon" style="transform: scale(2.2);" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col items-center">
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Results Driven</h4>
+            <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">
+              We fight for the best possible outcome.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- STAGE 3 CONTAINER: "Why Clients Choose Us" -->
+    <section class="w-full bg-[#02084b] text-white px-6 py-20 flex flex-col items-center">
+      
+      <!-- HEADING: Trusted Legal Counsel -->
+      <h2 class="text-3xl font-serif text-white mb-20 text-center tracking-tight leading-snug">
+        Trusted Legal Counsel When It Matters Most
+      </h2>
+
+      <!-- STAGE 3 FOUR-COLUMN VALUE ICONS: Forced Horizontal Row Bypass -->
+      <div 
+        style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; margin-bottom: 50px; justify-items: center;"
+      >
+        
+        <!-- Value 1: 30 Plus Years of Experience -->
+        <div class="flex flex-col items-center text-center max-w-[260px] group">
+          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={yearsIcon.src} alt="30 Plus Years of Experience Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
+            30 Plus Years of Experience
+          </p>
+        </div>
+
+        <!-- Value 2: Hundreds of Successful Cases -->
+        <div class="flex flex-col items-center text-center max-w-[260px] group">
+          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={casesIcon.src} alt="Hundreds of Successful Cases Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
+            Hundreds of Successful Cases
+          </p>
+        </div>
+
+        <!-- Value 3: Five-Star Client Satisfaction -->
+        <div class="flex flex-col items-center text-center max-w-[260px] group">
+          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={ratingIcon.src} alt="Five-Star Client Satisfaction Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
+            Five-Star Client Satisfaction
+          </p>
+        </div>
+
+        <!-- Value 4: Personalized Representation -->
+        <div class="flex flex-col items-center text-center max-w-[260px] group">
+          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
+            <img src={representationIcon.src} alt="Personalized Representation Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
+            Personalized Representation
+          </p>
+        </div>
+
+      </div>
+
+      <!-- HEADING: Why Clients Choose Us -->
+      <h2 class="text-3xl font-serif text-white mb-10 text-center tracking-tight leading-snug">
+        Why Clients Choose Hanover and Echols Legal
+      </h2>
+
+      <!-- DESCRIPTION BLOCK -->
+      <div class="w-full max-w-4xl text-center mb-16 leading-relaxed">
+        <p class="text-sm md:text-base font-light text-slate-300">
+          We provide strategic, results-driven legal representation with the personalized attention only a boutique law firm can offer. Every case is handled directly by an experienced attorney committed to protecting your interests.
+        </p>
+      </div>
+
+      <!-- TWO-COLUMN Call to Action Matrix: Using forced grid horizontal bypass -->
+      <div 
+        style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem; width: 100%; max-width: 7xl; justify-items: center; align-items: start;"
+      >
+        
+        <!-- LEFT: Firm Value List -->
+        <div class="flex flex-col text-slate-300 text-sm md:text-base font-light leading-loose space-y-1">
+          <p class="flex items-center gap-3">
+            <span class="text-xs">✓</span> Direct Attorney Access
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xs">✓</span> Tailored Legal Strategies
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xs">✓</span> Transparent Communication
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xs">✓</span> Aggressive Advocacy
+          </p>
+          <p class="flex items-center gap-3">
+            <span class="text-xs">✓</span> Confidential Representation
+          </p>
+        </div>
+
+        <!-- RIGHT: Two Dynamic Buttons -->
+        <div class="flex flex-col gap-6 w-full max-w-[420px]">
+          
+          <!-- BUTTON 1: Request Case Review (Blue) -->
+          <a 
+            href="/contact-us" 
+            class="block w-full py-5 px-8 rounded-xl bg-[#00E5FF] hover:bg-[#00E5FF]/80 text-center text-white text-xs font-semibold tracking-widest uppercase shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all duration-300 group"
+          >
+            Request a Free Confidential Case Review <span class="group-hover:translate-x-1.5 transition-transform inline-block ml-1">&rarr;</span>
+          </a>
+
+          <!-- BUTTON 2: ACTIVE Click-to-Call (Yellow) -->
+          <a 
+            href="tel:+14699024621" 
+            class="block w-full py-5 px-8 rounded-xl bg-[#FDD835] hover:bg-[#FDD835]/80 text-center text-[#010636] text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-xl"
+          >
+            Call Us Today – +1 469 902 4621
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <section class="max-w-4xl mx-auto px-6 py-20 text-white">
+  <h2 class="text-4xl font-serif mb-6">Criminal Defense</h2>
+  <h3 class="text-2xl font-medium mb-8 text-slate-200">Aggressive Representation in Dallas County Courts</h3>
+  
+  <div class="space-y-6 text-slate-300 mb-12 leading-relaxed">
+    <p>Facing criminal charges in North Texas can completely upend your life, leaving you to face an aggressive prosecution and a complex legal system alone. Our dedicated Dallas criminal defense attorneys provide the relentless, strategic legal representation required to shield your rights, protect your freedom, and safeguard your future reputation. Whether you are dealing with a standard misdemeanor, a complex federal investigation, or high-stakes felony charges in the DFW metroplex, an experienced criminal defense lawyer in Dallas will immediately take control of your situation.</p>
+    <p>We don't simply accept the prosecution's version of events. Our legal team meticulously deconstructs the state's case from the ground up—uncovering constitutional violations, challenging unlawful law enforcement procedures, and analyzing every piece of forensic evidence available. From navigating the initial arraignment to fiercely advocating for you before Dallas County judges and juries, we are committed to building a robust defense tailored to the specific facts of your case. Our singular focus is achieving the best possible legal resolution, whether that involves securing a complete dismissal of charges, negotiating a significant reduction, or presenting a powerhouse defense at trial.</p>
+  </div>
+
+  <h4 class="text-xl font-bold mb-6">Key Practice Areas & Defense Strategies</h4>
+  <ul class="space-y-4 mb-10 text-slate-300">
+    <li><strong>Aggressive Felony & Misdemeanor Defense:</strong> Providing relentless representation for individuals facing state or federal charges across the DFW metroplex.</li>
+    <li><strong>Meticulous Case Analysis & Investigation:</strong> Deconstructing the prosecution's evidence, uncovering constitutional violations, and challenging unlawful law enforcement procedures.</li>
+    <li><strong>DWI & Traffic Offense Advocacy:</strong> Protecting your driving privileges, challenging breath and blood tests, and fighting to keep your record clean in Dallas County.</li>
+    <li><strong>Drug Charges & Federal Offenses:</strong> Navigating complex state and federal drug laws with sophisticated strategies designed to secure dismissals or reduced charges.</li>
+    <li><strong>Relentless Trial & Courtroom Representation:</strong> Standing fiercely by your side from the initial arraignment all the way through a jury verdict to protect your future.</li>
+  </ul>
+
+  <a href="/criminal-defense" class="inline-block bg-[#00E5FF] hover:bg-[#00E5FF]/80 text-[#010636] font-bold py-3 px-8 rounded-lg uppercase tracking-widest transition-all">
+    Learn More
+  </a>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 py-20 text-white">
+  <!-- Top Buttons -->
+  <div class="flex gap-6 mb-16">
+    <a href="/contact-us" class="py-4 px-8 bg-[#00E5FF] hover:bg-[#00E5FF]/80 text-[#010636] font-bold rounded-lg uppercase tracking-widest transition-all">Request a Free Confidential Case Review</a>
+    <a href="tel:+14699024621" class="py-4 px-8 bg-[#FDD835] text-[#010636] font-bold rounded-lg uppercase tracking-widest transition-all">Call Us Today – +1 469 902 4621</a>
+  </div>
+
+  <!-- Heading & Text -->
+  <h2 class="text-4xl font-serif mb-8">Family Law</h2>
+  <p class="text-slate-300 leading-relaxed mb-16 max-w-4xl">
+    Navigating legal matters that impact your home and future can be emotionally demanding and legally complex. Our dedicated Dallas family law attorneys provide compassionate guidance and assertive legal representation to help you protect what matters most. Whether you are facing a contested divorce, negotiating complex property division, or restructuring your family dynamic, an experienced family law attorney in Dallas will safeguard your interests. We understand the high stakes involved in Texas family courts, and we are committed to delivering tailored, strategic legal solutions that provide clarity, stability, and peace of mind for you and your children.
+  </p>
+
+  <!-- Horizontal Boxes -->
+  <div class="grid md:grid-cols-2 gap-8">
+    {[
+      { title: "Divorce Representation", body: "Ending a marriage involves high-stakes decisions regarding asset division, debt allocation, and long-term financial security. Our Dallas divorce lawyers provide aggressive representation for both contested and uncontested divorces in North Texas. We meticulously analyze complex marital estates, protect separate property, and fight to ensure an equitable distribution under Texas community property laws, allowing you to move forward with financial confidence." },
+      { title: "Prenuptial Agreements", body: "A well-crafted marital agreement provides financial clarity and protects personal assets before entering a marriage. We draft enforceable, comprehensive Dallas prenuptial agreements tailored to Texas family code standards. By clearly defining separate property rights, business interests, and future financial expectations, we help couples build a secure foundation and prevent costly, stressful disputes down the road." },
+      { title: "Child Custoday", body: "Nothing is more critical than protecting your parental rights and the well-being of your children. Navigating child custody in Dallas County requires a strategic approach focused on the best interests of the child, establishing workable joint managing conservatorships, and securing fair visitation schedules. We advocate fiercely for your relationship with your children, whether establishing initial custody agreements or pursuing modifications to existing court orders." },
+      { title: "Spousal Support & Alimony", body: "Achieving post-divorce financial stability requires a fair assessment of ongoing support. While contractual alimony and court-ordered spousal maintenance in Texas have strict eligibility thresholds, our legal team ensures your financial needs or contributions are accurately presented. We fight to secure fair spousal support in Dallas, ensuring that factors like earning capacity, marriage duration, and financial sacrifice are heavily prioritized." },
+      { title: "Divorce Mediation", body: "For couples seeking a less adversarial, more cost-effective path to resolving marital disputes, mediation offers a private alternative to a public courtroom battle. Our skilled Dallas divorce mediators facilitate constructive communication, helping both parties reach mutually beneficial agreements on asset division and co-parenting structures while ensuring your rights remain fully protected throughout the negotiation process." },
+      { title: "Adoption", body: "Welcoming a child into your home is a joyous milestone, but navigating Texas adoption laws requires precise legal execution. Our Dallas adoption attorneys guide stepparents, relatives, and growing families through every phase of the legal process, from private placements to agency adoptions. We handle all complex court filings, background checks, and home study requirements, ensuring your parental rights are securely established in Dallas County courts." }
+    ].map(box => (
+      <div class="border-2 border-cyan-500 rounded-[2rem] p-8 bg-[#02084b] hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,232,255,0.8)] transition-all duration-300">
+        <p class="text-slate-300 leading-relaxed text-sm">{box.body}</p>
+      </div>
+    ))}
+  </div>
+
+  <a href="/family-law" class="inline-block mt-8 bg-[#00E5FF] hover:bg-[#00E5FF]/80 text-[#010636] font-bold py-3 px-8 rounded-lg uppercase tracking-widest transition-all">
+  Learn More
+</a>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 py-20 text-white">
+  <h2 class="text-4xl font-serif mb-6">Personal Injury</h2>
+    
+  <div class="space-y-6 text-slate-300 mb-12 leading-relaxed">
+    <p>If you or a loved one have suffered a catastrophic injury due to someone else's negligence, navigating the aftermath can be 
+an overwhelming physical and financial battle. Our dedicated Dallas personal injury attorneys provide aggressive, 
+results-driven legal representation to ensure negligent parties and insurance companies are held fully accountable. 
+Whether you are recovering from a severe car accident, a commercial truck collision on the I-35, a slip-and-fall, 
+or a wrongful death incident in the DFW metroplex, an experienced personal injury lawyer in Dallas will fiercely advocate for your rights. 
+We meticulously calculate the true cost of your medical bills, lost wages, and long-term rehabilitation, fighting relentlessly 
+in Dallas County courts to secure the maximum compensation you deserve so you can focus entirely on your recovery.</p>
+  </div>
+
+  <h4 class="text-xl font-bold mb-6">Key Practice Areas</h4>
+  <ul class="space-y-4 mb-10 text-slate-300">
+    <li><strong>Motor Vehicle & Truck Accidents:</strong> Fighting for victims of high-impact highway collisions,     
+       commercial big-rig wrecks, and motorcycle accidents across North Texas.</li>
+    <li><strong>Premises Liability & Slip and Falls:</strong> Holding negligent Dallas property owners accountable 
+       for hazardous conditions, lack of security, and poorly maintained premises.</li>
+    <li><strong>Workplace & Construction Injuries:</strong> Navigating complex Texas non-subscriber laws 
+       and third-party liability claims to protect injured workers.</li>
+    <li><strong>Catastrophic Injury & Wrongful Death:</strong> Providing compassionate yet fierce advocacy for 
+       families facing life-altering spinal injuries, traumatic brain injuries, or the tragic loss of a loved one</li>
+    </ul>
+
+  <a href="/personal-injury" class="inline-block bg-[#00E5FF] hover:bg-[#00E5FF]/80 text-[#010636] font-bold py-3 px-8 rounded-lg uppercase tracking-widest transition-all">
+    Learn More
+  </a>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-20 text-white">
+  <!-- Heading & Team Section -->
+  <h2 class="text-3xl font-serif mb-10">Meet Our Team of Expert Attorneys</h2>
+  
+  <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+    <div class="rounded-3xl overflow-hidden shadow-2xl">
+      <img src={teamPhoto.src} alt="Our Team of Attorneys" class="w-full h-auto object-cover" />
+    </div>
+    
+    <div class="text-lg font-light leading-relaxed">
+      <p class="mb-6 font-semibold">From left to right:</p>
+      <ul class="space-y-2 text-slate-200">
+        <li>Jillian Aderson Esq.</li>
+        <li>John Williams Esq.</li>
+        <li>Elizabeth Crowley</li>
+        <li>Judith Peters</li>
+        <li>Mary Fitzpatrick Esq.</li>
+        <li>Allan Henderson Esq.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Blue Trust Badge Banner -->
+  <div class="bg-[#b2e0f7] p-8 rounded-2xl flex flex-wrap items-center justify-center gap-8 md:gap-16">
+    <img src={superLawyers.src} alt="Super Lawyers" class="h-12 w-auto object-contain" />
+    <img src={nbtaLogo.src} alt="NBTA" class="h-16 w-auto object-contain" />
+    <img src={abaLogo.src} alt="ABA" class="h-16 w-auto object-contain" />
+    <img src={top100Logo.src} alt="Top 100" class="h-16 w-auto object-contain" />
+    <img src={stateBarLogo.src} alt="State Bar of Texas" class="h-16 w-auto object-contain" />
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 mt-[5px] text-white">
+  <!-- The 'gap-1' below brings the words and images closer horizontally -->
+  <div class="flex items-center gap-[70px] mb-8 text-3xl font-serif leading-none">
+    <span>Our</span>
+    <img src={stars.src} alt="5 stars" class="h-60 w-auto" />
+    <img src={googleLogo.src} alt="Google" class="h-15 w-auto" />
+    <span>Reviews</span>
+  </div>
+
+  <!-- Review Cards -->
+  <div class="grid md:grid-cols-3 gap-8">
+    {[
+      { 
+        text: "When I was facing serious felony charges in Dallas County, I thought my future was completely over. The team at Hanover & Echols stepped in and immediately took control. They uncovered a critical constitutional violation in how the evidence was collected, and my case was completely dismissed before trial. If you need a fierce, brilliant criminal defense attorney in Dallas, do not hesitate to call them.", 
+        name: "Marcus R." 
+      },
+      { 
+        text: "Going through a contested divorce and child custody battle was the most stressful experience of my life. My family law attorney was an absolute rock throughout the entire process. They were incredibly empathetic, highly responsive, and fought fiercely to protect my parental rights in court. I walked away with complete peace of mind and an excellent custody arrangement for my kids.", 
+        name: "Sarah M." 
+      },
+      { 
+        text: "After my highway accident on the I-35, the insurance companies tried to downplay my injuries and pressure me into a lowball settlement. The personal injury team here took over all the communication, calculated my true medical costs, and fought relentlessly for me. They secured a settlement that covered all my medical bills and lost wages. They truly care about their clients.", 
+        name: "Alejandro G." 
+      }
+    ].map(review => (
+      <div class="border-2 border-cyan-500 rounded-[2rem] p-8 bg-[#02084b] flex flex-col justify-between">
+        <p class="text-slate-200 leading-relaxed mb-8">{review.text}</p>
+        <p class="font-bold">{review.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-20 text-[#010636]">
+  <!-- Light Blue Banner -->
+  <div class="bg-[#b2e0f7] p-10 rounded-[2rem] mb-8">
+    <h2 class="text-3xl font-serif font-bold mb-6">Speak With An Experienced Attorney Today</h2>
+    <p class="text-lg leading-relaxed max-w-4xl">
+      When your freedom, your family's future, or your financial recovery is on the line, delaying legal action can compromise the outcome of your case. The legal team at Hanover & Echols is available 24/7 to provide the aggressive, strategic, and confidential advocacy you need right now. Whether you need an uncompromising criminal defense strategy, compassionate guidance through a complex family law dispute, or a relentless pursuit of maximum injury compensation, a dedicated Dallas trial attorney is ready to review your case. Do not face the Texas legal system alone—contact our Dallas law firm today to schedule your free, no-obligation case evaluation and take control of your future.
+    </p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex flex-col sm:flex-row gap-4 mb-16">
+    <a href="/contact-us" class="py-4 px-8 bg-[#64B5F6] hover:bg-[#64B5F6]/80 text-[#010636] font-bold rounded-lg uppercase tracking-widest transition-all w-fit">
+      Request a Free Confidential Case Review
+    </a>
+    <a href="tel:+14699024621" class="py-4 px-8 bg-[#FDD835] hover:bg-[#FDD835]/80 text-[#010636] font-bold rounded-lg uppercase tracking-widest transition-all w-fit">
+      Call Us Today – +1 469 902 4621
+    </a>
+  </div>
+
+  <!-- Serving Clients Section -->
+  <div class="text-white">
+    <h3 class="text-2xl font-serif mb-6">Serving Clients Throughout Dallas-Fort Worth</h3>
+    <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-slate-300">
+      <li>• Dallas</li>
+      <li>• Plano</li>
+      <li>• Frisco</li>
+      <li>• McKinney</li>
+      <li>• Irving</li>
+      <li>• Garland</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-[#02084b] py-16 px-6 text-white">
+  <div class="max-w-4xl mx-auto" id="contact-form-container">
+    <h2 class="text-4xl font-serif mb-8 text-center">Schedule Your Free Consultation</h2>
+    
+    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Full Name</label>
+        <input type="text" placeholder="John Doe" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Email Address</label>
+        <input type="email" placeholder="john@example.com" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Phone Number</label>
+        <input type="tel" placeholder="+1 469 902 4621" required class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-semibold">Legal Service Needed</label>
+        <select class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg focus:ring-2 focus:ring-[#64B5F6] outline-none text-white">
+          <option>Criminal Defense</option>
+          <option>Family Law</option>
+          <option>Personal Injury</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-2 md:col-span-2">
+        <label class="text-sm font-semibold">Briefly describe your case</label>
+        <textarea placeholder="Tell us how we can help..." class="w-full p-4 bg-[#1a237e] border border-[#3949ab] rounded-lg h-32 focus:ring-2 focus:ring-[#64B5F6] outline-none placeholder-blue-300"></textarea>
+      </div>
+
+      <button type="submit" class="md:col-span-2 w-full bg-[#64B5F6] text-[#02084b] py-4 rounded-lg font-bold hover:bg-white transition-all">
+        Send Request
+      </button>
+    </form>
+
+    <div id="successMessage" class="hidden text-center py-20 animate-fade-in">
+      <div class="text-emerald-400 text-6xl mb-4">✓</div>
+      <h3 class="text-3xl font-serif">Thank You</h3>
+      <p class="text-lg text-blue-200 mt-2">Your request has been sent. An attorney will contact you shortly.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('successMessage');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.classList.add('hidden');
+    success.classList.remove('hidden');
+  });
+</script>
+
+<style>
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  .animate-fade-in { animation: fade-in 0.8s ease-in; }
+</style>
+
+<Footer />
+
+</BaseLayout>
