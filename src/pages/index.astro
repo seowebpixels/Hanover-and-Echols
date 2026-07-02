@@ -74,20 +74,21 @@ import socialIcons from '../assets/images/social-media-icons.png';
       <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
       <p 
-        style="font-family: 'Cormorant Garamond', serif !important;" 
-        class="text-2xl md:text-3xl lg:text-4xl font-medium tracking-wider text-slate-200 mb-6 text-center"
-      >
-        Dedicated. Strategic. Results Driven.
-      </p>
+  style="font-family: 'Cormorant Garamond', serif !important;" 
+  class="text-2xl md:text-3xl lg:text-4xl font-medium tracking-wider text-slate-200 mb-6 text-center flex flex-col md:flex-row justify-center gap-1 md:gap-3"
+>
+  <span>Dedicated. Strategic.</span>
+  <span>Results Driven.</span>
+</p>
 
       <!-- SHIELD DIVIDER -->
-      <div class="w-full max-w-2xl flex items-center justify-center gap-6 mb-12">
-        <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/40 to-white/70"></div>
-        <div class="w-50 h-50 flex-shrink-0">
-          <img src={heroShield.src} alt="Shield Icon" class="w-full h-full object-contain filter drop-shadow-lg" />
-        </div>
-        <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-white/40 to-white/70"></div>
-      </div>
+<div class="w-full max-w-2xl flex items-center justify-center gap-6 mb-12 -mt-[25px]">
+  <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/40 to-white/70"></div>
+  <div class="w-20 h-20 flex-shrink-0"> <!-- Adjusted size for better visual balance -->
+    <img src={heroShield.src} alt="Shield Icon" class="w-full h-full object-contain filter drop-shadow-lg" />
+  </div>
+  <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-white/40 to-white/70"></div>
+</div>
 
       <!-- MAIN CORE COMMITMENT HEADLINE -->
       <h2 class="text-3xl md:text-4xl font-normal tracking-wider text-center mb-8 uppercase max-w-4xl leading-snug">
