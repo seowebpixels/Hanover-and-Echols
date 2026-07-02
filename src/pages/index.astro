@@ -585,8 +585,16 @@ in Dallas County courts to secure the maximum compensation you deserve so you ca
 <style>
   @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
   .animate-fade-in { animation: fade-in 0.8s ease-in; }
-</style>
 
+  /* Force zero spacing to kill that gap */
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+  }
+</style>
 <Footer />
 
 </BaseLayout>
