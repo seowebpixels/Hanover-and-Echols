@@ -52,21 +52,18 @@ import socialIcons from '../assets/images/social-media-icons.png';
 <BaseLayout title="Hanover & Echols, LLC | Premium DFW Legal Counsel">
   <div class="w-full bg-[#02084b] min-h-screen flex flex-col text-white">
     
-  <Header/>
+  <!-- CORRECTED: Single Header with absolute positioning -->
+  <Header class="absolute w-full z-50" />
   
-    <!-- Change this section in index.astro -->
-<Header class="absolute w-full z-50" /> <!-- Add absolute positioning -->
-
-<section class="hero-wrapper w-full relative overflow-hidden z-10">
-  <div class="w-full aspect-[8/9] md:aspect-[21/9] lg:h-[500px]">
-    <Image 
-      src={skylineImage} 
-      alt="Dallas Skyline at Night" 
-      class="w-full h-full object-cover object-center block leading-none"
-      ...
-    />
-  </div>
-</section>
+  <section class="hero-wrapper w-full relative overflow-hidden z-10">
+    <div class="w-full aspect-[8/9] md:aspect-[21/9] lg:h-[500px]">
+      <Image 
+        src={skylineImage} 
+        alt="Dallas Skyline at Night" 
+        class="w-full h-full object-cover object-center block leading-none"
+      />
+    </div>
+  </section>
 
     <!-- STAGE 2 CONTAINER -->
     <section class="w-full bg-[#02084b] text-white px-6 pt-0 pb-20 flex flex-col items-center">
