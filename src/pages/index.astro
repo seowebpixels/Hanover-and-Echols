@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServicesMatrix from '../components/ServicesMatrix.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
@@ -152,17 +151,10 @@ import socialIcons from '../assets/images/social-media-icons.png';
   </div>
 </div>
 
-      <!-- TRUST & BRAND FEATURES: Forced 4-Column Horizontal Row Bypass -->
-      <div 
-        style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; pt: 4rem; border-top: 1px solid rgba(255,255,255,0.1);"
-        class="pt-16"
-      >
+      <!-- TRUST & BRAND FEATURES: Corrected Stacked Layout -->
+<section class="flex flex-col gap-8 w-full max-w-lg mx-auto pt-16 border-t border-white/10 px-6">
         
-        <!-- Feature 1: Client Focused -->
-        <div class="flex flex-col gap-8 w-full max-w-lg mx-auto pt-16 border-t border-white/10 px-6">
-        
-  <div class="flex flex-col gap-8 w-full max-w-lg mx-auto pt-16 border-t border-white/10 px-6">
-        
+  <!-- Feature 1: Client Focused -->
   <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
     <div class="w-24 h-24 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-4 shadow-xl">
       <img src={clientIcon.src} alt="Shield Check Icon" style="transform: scale(1.6);" class="w-full h-full object-contain" />
@@ -170,96 +162,35 @@ import socialIcons from '../assets/images/social-media-icons.png';
     <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Client Focused</h4>
     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">Personalized attention for every case.</p>
   </div>
-        </div>
 
-        <!-- Feature 2: Experienced -->
-        <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
+  <!-- Feature 2: Experienced -->
+  <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
     <div class="w-24 h-24 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-4 shadow-xl">
       <img src={experienceIcon.src} alt="Courthouse Pillars Icon" style="transform: scale(1.6);" class="w-full h-full object-contain" />
     </div>
     <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Experienced</h4>
     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">Decades of combined legal experience.</p>
   </div>
-        </div>
 
-        <!-- Feature 3: Discreet -->
-        <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
+  <!-- Feature 3: Discreet -->
+  <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
     <div class="w-24 h-24 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-4 shadow-xl">
       <img src={discreetIcon.src} alt="Handshake Icon" style="transform: scale(1.6);" class="w-full h-full object-contain" />
     </div>
     <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Discreet</h4>
     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">Your case is completely confidential.</p>
   </div>
-        </div>
 
-        <!-- Feature 4: Results Driven -->
-        <<div class="flex flex-col items-center text-center p-4 rounded-2xl group">
+  <!-- Feature 4: Results Driven -->
+  <div class="flex flex-col items-center text-center p-4 rounded-2xl group">
     <div class="w-24 h-24 bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 group-hover:border-cyan-400/50 group-hover:bg-[#010636] transition-all duration-300 mb-4 shadow-xl">
       <img src={resultsIcon.src} alt="Trophy Icon" style="transform: scale(1.6);" class="w-full h-full object-contain" />
     </div>
     <h4 class="text-sm font-semibold uppercase tracking-widest text-white mb-2">Results Driven</h4>
     <p class="text-xs text-slate-300 font-light leading-relaxed max-w-[200px]">We fight for the best possible outcome.</p>
   </div>
-        </div>
 
-      </div>
-
-    </section>
-
-    <!-- STAGE 3 CONTAINER: "Why Clients Choose Us" -->
-    <section class="w-full bg-[#02084b] text-white px-6 py-20 flex flex-col items-center">
-      
-      <!-- HEADING: Trusted Legal Counsel -->
-      <h2 class="text-3xl font-serif text-white mb-20 text-center tracking-tight leading-snug">
-        Trusted Legal Counsel When It Matters Most
-      </h2>
-
-      <!-- STAGE 3 FOUR-COLUMN VALUE ICONS: Forced Horizontal Row Bypass -->
-      <div 
-        style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; width: 100%; max-width: 80rem; margin-bottom: 50px; justify-items: center;"
-      >
-        
-        <!-- Value 1: 30 Plus Years of Experience -->
-        <div class="flex flex-col items-center text-center max-w-[260px] group">
-          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
-            <img src={yearsIcon.src} alt="30 Plus Years of Experience Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
-          </div>
-          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
-            30 Plus Years of Experience
-          </p>
-        </div>
-
-        <!-- Value 2: Hundreds of Successful Cases -->
-        <div class="flex flex-col items-center text-center max-w-[260px] group">
-          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
-            <img src={casesIcon.src} alt="Hundreds of Successful Cases Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
-          </div>
-          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
-            Hundreds of Successful Cases
-          </p>
-        </div>
-
-        <!-- Value 3: Five-Star Client Satisfaction -->
-        <div class="flex flex-col items-center text-center max-w-[260px] group">
-          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
-            <img src={ratingIcon.src} alt="Five-Star Client Satisfaction Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
-          </div>
-          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
-            Five-Star Client Satisfaction
-          </p>
-        </div>
-
-        <!-- Value 4: Personalized Representation -->
-        <div class="flex flex-col items-center text-center max-w-[260px] group">
-          <div style="width: 150px; height: 150px;" class="mb-6 rounded-full border border-white/20 flex items-center justify-center bg-[#010636] group-hover:border-[#00E5FF]/50 transition-colors duration-300">
-            <img src={representationIcon.src} alt="Personalized Representation Icon" style="transform: scale(2.8);" class="w-full h-full object-contain" />
-          </div>
-          <p class="text-xs text-slate-300 font-semibold tracking-widest uppercase">
-            Personalized Representation
-          </p>
-        </div>
-
-      </div>
+</section>
 
       <!-- HEADING: Why Clients Choose Us -->
       <h2 class="text-3xl font-serif text-white mb-10 text-center tracking-tight leading-snug">
