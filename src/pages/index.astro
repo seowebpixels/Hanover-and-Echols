@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServicesMatrix from '../components/ServicesMatrix.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
 
 // STAGE 1 LOGO & HERO IMPORTS
 import logoImage from '../assets/images/hanover-and-echols-square-logo.png';
@@ -56,10 +57,10 @@ import socialIcons from '../assets/images/social-media-icons.png';
     <!-- HERO BANNER IMAGE FRAME -->
 <section class="w-full relative overflow-hidden z-10">
   <div class="w-full aspect-[8/9] md:aspect-[21/9] lg:h-[500px]">
-    <img 
-      src={skylineImage.src} 
+    <Image 
+      src={skylineImage} 
       alt="Dallas Skyline at Night" 
-      class="w-full h-full object-cover object-center block"
+      class="w-full h-full object-cover object-center block leading-none"
       format="avif"
       quality="high"
       fetchpriority="high"
