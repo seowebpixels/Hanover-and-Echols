@@ -583,13 +583,18 @@ in Dallas County courts to secure the maximum compensation you deserve so you ca
   @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
   .animate-fade-in { animation: fade-in 0.8s ease-in; }
 
-  /* Force zero spacing to kill that gap */
+  <style>
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  .animate-fade-in { animation: fade-in 0.8s ease-in; }
+
+  /* Force the hero to pull up behind the absolute header and kill all margins/padding */
   .hero-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 !important;
+    margin-top: -120px !important; /* Adjust this value (e.g., -80px to -140px) until the gap disappears */
     padding: 0 !important;
     line-height: 0 !important;
+    width: 100% !important;
   }
 </style>
 <Footer />
